@@ -29,7 +29,7 @@ class ListSpecialtyVacancyView(TemplateView):
             context['specialty'] = specialty
             context['vacancies'] = vacancies
         except Specialty.DoesNotExist:
-            raise Http404(f"specialty code={specialty_code} not found")
+            raise Http404(f"specialty code='{specialty_code}' not found")
         return context
 
 
